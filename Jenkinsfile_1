@@ -37,16 +37,19 @@ pipeline
 	  {
       steps 
 	  {
+		sh 'ng new FrontEnd-Angular-Project'
+		sh 'cd FrontEnd-Angular-Project'
 		sh 'ng build --output-path=dist/dev'
+		sh 'ng serve'
       }
     }
     
-    stage('Launch App') 
-	{
-      steps 
-	  {
-		sh 'lite-server --baseDir="dist/dev"'
-      }
-    }
+    //stage('Launch App') 
+	//{
+      //steps 
+	  //{
+		//sh 'lite-server --baseDir="dist/dev"'
+      //}
+    //}
   }
 }
