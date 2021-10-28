@@ -1,43 +1,52 @@
-pipeline {
+pipeline 
+{
   agent any
     
   tools {nodejs "node"}
     
-  stages {
+  stages 
+  {
         
-    stage('Cloning Git') {
-      steps {
+    stage('Cloning Git') 
+	{
+      steps 
+	  {
         git 'https://github.com/ravikirankiran097/NodeJS-FrontEnd.git'
       }
     }
         
-    stage('Install dependencies') {
-      steps {
+    stage('Install dependencies') 
+	{
+      steps 
+	  {
         sh 'npm install npm --global'
         sh 'npm install lite-server -g'
         sh 'npm install -g @angular/cli'
       }
     }
      
-    stage('Test') {
-      steps {
+    stage('Test') 
+	{
+      steps 
+	  {
          sh 'npm test'
       }
-      }
+    }
       
-      stage('Build') {
-      steps {
+      stage('Build') 
+	  {
+      steps 
+	  {
       ng build --output-path=dist/dev
       }
-      }
+    }
     
-    stage('Launch App') {
-      steps {
+    stage('Launch App') 
+	{
+      steps 
+	  {
     lite-server --baseDir="dist/dev
+      }
     }
-    }
-    
-    
-         
   }
 }
