@@ -40,7 +40,7 @@ pipeline
 	  	sh 'ng version'
 		sh 'ng new FrontEnd-Angular-Project'
 		sh 'cd FrontEnd-Angular-Project'
-		sh 'npm run ng serve --open'
+		sh 'lite-server'
       }
     }
 
