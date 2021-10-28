@@ -39,7 +39,7 @@ pipeline
 	  {
 		sh 'ng new FrontEnd-Angular-Project'
 		sh 'cd FrontEnd-Angular-Project'
-		sh 'ng build --output-path=dist/dev'
+		
 		sh 'ng serve'
       }
     }
