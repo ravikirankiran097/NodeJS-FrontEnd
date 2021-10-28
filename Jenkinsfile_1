@@ -40,7 +40,7 @@ pipeline
 		sh 'ng new FrontEnd-Angular-Project'
 		sh 'cd FrontEnd-Angular-Project'
 		
-		sh 'ng serve'
+		sh 'ng serve --open'
       }
     }
 
