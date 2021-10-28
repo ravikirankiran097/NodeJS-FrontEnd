@@ -43,13 +43,6 @@ pipeline
 		sh 'ng serve'
       }
     }
-    
-    //stage('Launch App') 
-	//{
-      //steps 
-	  //{
-		//sh 'lite-server --baseDir="dist/dev"'
-      //}
-    //}
+
   }
 }
