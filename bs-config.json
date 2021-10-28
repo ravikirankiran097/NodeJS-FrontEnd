@@ -1,7 +1,10 @@
 {
     "port": 3000,
-    "files": ["./dist/**/*.{html,htm,css,js}"],
-    "server": { "baseDir": "dist/dev" },
+    "files": ["./**/*.{html,htm,css,js}"],
+    "server": {
+    baseDir: './',
+    middleware: [ [Function (anonymous)], [Function (anonymous)] ]
+  },
     "ui": {
       "port": 8001
     }
