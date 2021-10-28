@@ -22,6 +22,7 @@ pipeline
         sh 'npm install npm --global'
         sh 'npm install lite-server -g'
         sh 'npm install -g @angular/cli'
+	sh 'npm install --global mocha'
       }
     }
      
