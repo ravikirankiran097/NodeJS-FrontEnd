@@ -37,6 +37,7 @@ pipeline
 	  {
       steps 
 	  {
+	  	sh 'ng -v'
 		sh 'ng new FrontEnd-Angular-Project'
 		sh 'cd FrontEnd-Angular-Project'
 		
