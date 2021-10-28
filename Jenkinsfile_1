@@ -23,6 +23,21 @@ pipeline {
       steps {
          sh 'npm test'
       }
+      
+      
+      stage('Build') {
+      steps {
+      ng build --output-path=dist/dev
+      }
+      }
+    
+    stage('Launch App') {
+      steps {
+    lite-server --baseDir="dist/dev
+    }
+    }
+    
+    
     }      
   }
 }
