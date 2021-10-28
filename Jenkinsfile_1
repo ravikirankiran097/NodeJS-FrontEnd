@@ -37,7 +37,7 @@ pipeline
 	  {
       steps 
 	  {
-      ng build --output-path=dist/dev
+		sh 'ng build --output-path=dist/dev'
       }
     }
     
@@ -45,7 +45,7 @@ pipeline
 	{
       steps 
 	  {
-    lite-server --baseDir="dist/dev
+		sh 'lite-server --baseDir="dist/dev"'
       }
     }
   }
